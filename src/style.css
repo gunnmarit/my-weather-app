@@ -1,0 +1,62 @@
+.container {
+  font-family: "Exo", sans-serif;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  color: rgb(2, 143, 124);
+  font-size: 80px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #ffcf34fc;
+  margin: 90px auto 20px;
+  font-size: 50px;
+}
+
+.d-flex {
+  margin: 50px 50px;
+}
+
+.btn-outline-success {
+  color: rgb(2, 143, 124);
+  border-color: rgb(2, 143, 124);
+  margin: 5px;
+}
+
+.btn-primary {
+  color: #000;
+  background-color: #fad765fc;
+  border-color: #ffcf34fc;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tempButton {
+  color: #ca0a74;
+  background-color: #fff;
+  border: 0ch;
+}
+
+.text-center {
+  margin-top: 50px;
+}
+
+.card-body-days {
+  color: #ca0a74;
+  text-align: center;
+}
+.card-body {
+  color: rgb(2, 143, 124);
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #ca0a74;
+  border-color: #ca0a74;
+}
