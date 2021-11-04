@@ -60,3 +60,8 @@ h2 {
   background-color: #ca0a74;
   border-color: #ca0a74;
 }
+
+ul {
+  padding: 0%;
+  list-style: none;
+}
