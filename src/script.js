@@ -74,16 +74,6 @@ function favorite2(event) {
 let formFavorite2 = document.querySelector("#favorite2Buttons");
 formFavorite2.addEventListener("click", favorite2);
 
-function favorite3(event) {
-  event.preventDefault();
-  let searchFavorite3 = document.querySelector("#favorite3Buttons");
-  let favoriteSearch3 = document.querySelector("h1");
-  favoriteSearch3.innerHTML = `Your Weather in ${searchFavorite3.value} Oslo!`;
-}
-
-let formFavorite3 = document.querySelector("#favorite3Buttons");
-formFavorite3.addEventListener("click", favorite3);
-
 //function convertingFarenheit(event) {
 //event.preventDefault();
 //let convFar = document.querySelector("#Celsius");
