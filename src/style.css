@@ -1,7 +1,7 @@
 .container {
   max-width: 900px;
   font-family: "Exo", sans-serif;
-  margin: 40px auto 30px;
+  margin: 50px auto 30px;
 }
 h1,
 h2 {
@@ -11,7 +11,7 @@ h2 {
 h1 {
   color: rgb(2, 143, 124);
   font-size: 60px;
-  line-height: 100;
+  line-height: 20px;
   margin-bottom: 30px;
 }
 
