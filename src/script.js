@@ -15,19 +15,23 @@ function cityPosition() {
   let apiKey = "69181bdb9d5f82f38a07c3cf8a85b271";
   let cityName = document.querySelector("#city-input");
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&appid=${apiKey}&units=metric`;
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTempSearchCity);
+  axios.get(apiUrl).then(showTempSearchCity);
 }
 
 function showTempSearchCity(response) {
   let roundTem = Math.round(response.data.main.temp);
   let place = document.querySelector("#apiPlace");
+  let descriptionElemet = document.querySelector("#description_today");
+  let windElement = document.querySelector("#wind_today");
   place.innerHTML = `Current temp is ${roundTem}°C`;
+  descriptionElemet.innerHTML = response.data.weather[0].description;
+  windElement.innerHTML = Math.round(response.data.wind.speed) + " m/s";
 }
 
 let newCity = document.querySelector("#city-form");
 newCity.addEventListener("submit", cityPosition);
 
-/////
+//Get description
 
 // Get your weather at your location
 function showTemperatureHere1(event) {
