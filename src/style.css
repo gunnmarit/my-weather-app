@@ -1,5 +1,5 @@
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   font-family: "Exo", sans-serif;
   margin: 50px auto 30px;
 }
@@ -75,6 +75,6 @@ ul {
   list-style: none;
 }
 
-li {
+li::first-letter {
   text-transform: capitalize;
 }

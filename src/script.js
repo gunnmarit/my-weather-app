@@ -23,15 +23,49 @@ function showTempSearchCity(response) {
   let place = document.querySelector("#apiPlace");
   let descriptionElemet = document.querySelector("#description_today");
   let windElement = document.querySelector("#wind_today");
+  let currentDates = document.querySelector("#today");
   place.innerHTML = `Current temp is ${roundTem}°C`;
   descriptionElemet.innerHTML = response.data.weather[0].description;
   windElement.innerHTML = Math.round(response.data.wind.speed) + " m/s";
+  currentDates.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 let newCity = document.querySelector("#city-form");
 newCity.addEventListener("submit", cityPosition);
 
-//Get description
+// Gives the current date and time
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = ("0" + date.getMinutes()).slice(-2);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `Updated at ${day} ${hours}: ${minutes}`;
+
+  let currentDates = document.querySelector("#today");
+  currentDates.innerHTML = formatDate(timestamp);
+
+  let tomorrowDay = days[now.getDay() + 1];
+  let tomorrowDates = document.querySelector("#tomorrow");
+  tomorrowDates.innerHTML = ` ${tomorrowDay}`;
+
+  let tomorrow2Day = days[now.getDay() + 2];
+  let tomorrow2Dates = document.querySelector("#tomorrow2");
+  tomorrow2Dates.innerHTML = ` ${tomorrow2Day}`;
+
+  let nextWeekDay = days[now.getDay() + 3];
+  let nextWeekDates = document.querySelector("#nextWeek");
+  nextWeekDates.innerHTML = ` ${nextWeekDay}`;
+}
+//console.log(formatDate());
 
 // Get your weather at your location
 function showTemperatureHere1(event) {
@@ -94,38 +128,3 @@ formFavorite2.addEventListener("click", favorite2);
 
 //let convCels = document.querySelector("#Celsius");
 //convCels.addEventListener("click", convertingCelsius);
-
-// Gives the current date and time
-function formatDate() {
-  let now = new Date();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  let currentHours = now.getHours();
-  let currentMinutes = ("0" + now.getMinutes()).slice(-2);
-  let currentDay = days[now.getDay()];
-  let forDate = `${currentDay} at ${currentHours}: ${currentMinutes}`;
-
-  let currentDates = document.querySelector("#today");
-  currentDates.innerHTML = ` ${forDate}`;
-
-  let tomorrowDay = days[now.getDay() + 1];
-  let tomorrowDates = document.querySelector("#tomorrow");
-  tomorrowDates.innerHTML = ` ${tomorrowDay}`;
-
-  let tomorrow2Day = days[now.getDay() + 2];
-  let tomorrow2Dates = document.querySelector("#tomorrow2");
-  tomorrow2Dates.innerHTML = ` ${tomorrow2Day}`;
-
-  let nextWeekDay = days[now.getDay() + 3];
-  let nextWeekDates = document.querySelector("#nextWeek");
-  nextWeekDates.innerHTML = ` ${nextWeekDay}`;
-}
-console.log(formatDate());
