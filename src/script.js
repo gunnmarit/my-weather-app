@@ -5,7 +5,6 @@ function citySearch(event) {
   let newPlace = document.querySelector("h1");
   newPlace.innerHTML = `Your Weather in ${searchPlaces.value}!`;
 }
-
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", citySearch);
 
@@ -24,7 +23,7 @@ function showTempSearchCity(response) {
   let descriptionElemet = document.querySelector("#description_today");
   let windElement = document.querySelector("#wind_today");
   let currentDates = document.querySelector("#today");
-  place.innerHTML = `Current temp is ${roundTem}°C`;
+  place.innerHTML = `Temperature is ${roundTem}°C`;
   descriptionElemet.innerHTML = response.data.weather[0].description;
   windElement.innerHTML = Math.round(response.data.wind.speed) + " m/s";
   currentDates.innerHTML = formatDate(response.data.dt * 1000);
@@ -37,6 +36,9 @@ newCity.addEventListener("submit", cityPosition);
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   let minutes = ("0" + date.getMinutes()).slice(-2);
   let days = [
     "Sunday",
@@ -49,9 +51,6 @@ function formatDate(timestamp) {
   ];
   let day = days[date.getDay()];
   return `Updated at ${day} ${hours}: ${minutes}`;
-
-  let currentDates = document.querySelector("#today");
-  currentDates.innerHTML = formatDate(timestamp);
 
   let tomorrowDay = days[now.getDay() + 1];
   let tomorrowDates = document.querySelector("#tomorrow");

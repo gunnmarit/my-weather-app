@@ -37,10 +37,16 @@
         </button>
       </form>
 
-      <div class="row row-cols-1 row-cols-md-4 g-3">
-        <div class="col">
+      <div class="row">
+        <div class="col-4">
           <div class="card h-100">
             <img src="images/sunny.png" class="card-img-top" alt="Weather" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="float-left">
             <div class="card-body-days" id="allDays">
               <ul>
                 <li class="card-text" id="today"></li>
@@ -53,22 +59,23 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="row"></div>
+        <div class="col-3">
           <div class="card h-100">
             <img src="images/sunny.png" class="card-img-top" alt="Weather" />
             <div class="card-body-days">
               <ul>
-                <li class="card-text" id="tomorrow">Date</li>
-                <li class="card-title" id="apiPlace">
-                  <strong>Temperature</strong>
-                </li>
+                <li class="card-text" id="tomorrow">Tomorrow</li>
+                <strong>
+                  <li class="card-title" id="apiPlace"></li>
+                </strong>
                 <li id="description_tomorrow"></li>
                 <li id="wind_tomorrow"></li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-3">
           <div class="card h-100">
             <img src="images/windy.png" class="card-img-top" alt="Weather" />
             <div class="card-body-days">
@@ -83,7 +90,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-3">
           <div class="card h-100">
             <img src="images/snow.png" class="card-img-top" alt="Weather" />
             <div class="card-body-days">
