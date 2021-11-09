@@ -53,7 +53,7 @@ h3 {
   margin-top: 50px;
 }
 
-.card-body-days {
+.justify-content-center {
   color: #ca0a74;
   text-align: center;
 }
@@ -70,14 +70,22 @@ h3 {
   border-color: #ca0a74;
 }
 .allDays {
-  padding: 110px 50px;
-  margin: 0%;
+  padding: 10px;
 }
 ul {
   margin: 0%;
   list-style: none;
+  padding: 80px 0px;
 }
 
 li::first-letter {
   text-transform: capitalize;
+}
+
+.icon {
+  margin: 50px;
+}
+
+.card-img-top {
+  padding: 50px 30px 0px;
 }

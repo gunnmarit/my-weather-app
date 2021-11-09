@@ -38,8 +38,9 @@
       </form>
 
       <div class="row">
-        <div class="col-6">
-          <div class="card-body-days">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+          <div class="justify-content-center">
             <img
               src="images/sunny.png"
               class="card-img-top"
@@ -48,30 +49,33 @@
             />
           </div>
         </div>
-        <div class="col-6">
-          <div class="float-left">
-            <div class="card-body-days" id="allDays">
-              <ul>
-                <li class="card-text" id="today"></li>
-                <strong>
-                  <li class="card-title" id="apiPlace">WEATHER</li>
-                </strong>
-                <li id="description_today"></li>
-                <li id="wind_today"></li>
-              </ul>
-            </div>
+        <div class="col-sm-4">
+          <div class="justify-content-center" id="allDays">
+            <ul>
+              <li class="card-text" id="today"></li>
+              <strong>
+                <li class="card-title" id="apiPlace">YOUR WEATHER</li>
+                <span class="units"
+                  ><a href="#" id="celsius-link">°C | </a>
+                  <a href="#" id="fahrenheit">°F</a></span
+                >
+              </strong>
+              <li id="description_today"></li>
+              <li id="wind_today"></li>
+            </ul>
           </div>
         </div>
+        <div class="col-sm-2"></div>
       </div>
 
       <div class="row">
         <div class="col-4">
           <img src="images/sunny.png" class="card-img-top" alt="Weather" />
-          <div class="card-body-days">
+          <div class="justify-content-center">
             <ul>
               <li class="card-text" id="tomorrow">Tomorrow</li>
               <strong>
-                <li class="card-title" id="apiPlace"></li>
+                <li class="card-title" id="apiPlace">YOUR WEATHER</li>
               </strong>
               <li id="description_tomorrow"></li>
               <li id="wind_tomorrow"></li>
@@ -81,11 +85,11 @@
 
         <div class="col-4">
           <img src="images/windy.png" class="card-img-top" alt="Weather" />
-          <div class="card-body-days">
+          <div class="justify-content-center">
             <ul>
               <li class="card-text" id="tomorrow2">Date</li>
               <li class="card-title" id="apiPlace">
-                <strong>Temperature</strong>
+                <strong>YOUR WEATHER</strong>
               </li>
               <li id="description_tomorrow2"></li>
               <li id="wind_tomorrow2"></li>
@@ -95,11 +99,11 @@
 
         <div class="col-4">
           <img src="images/snow.png" class="card-img-top" alt="Weather" />
-          <div class="card-body-days">
+          <div class="justify-content-center">
             <ul>
               <li class="card-text" id="nextWeek">Date</li>
               <li class="card-title" id="apiPlace">
-                <strong>Temperature</strong>
+                <strong>YOUR WEATHER</strong>
               </li>
               <li id="description_nextWeek"></li>
               <li id="wind_nextWeek"></li>
