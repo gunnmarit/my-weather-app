@@ -23,10 +23,16 @@ function showTempSearchCity(response) {
   let descriptionElemet = document.querySelector("#description_today");
   let windElement = document.querySelector("#wind_today");
   let currentDates = document.querySelector("#today");
+  let iconElement = document.querySelector("#icon");
+
   place.innerHTML = `Temperature is ${roundTem}°C`;
   descriptionElemet.innerHTML = response.data.weather[0].description;
   windElement.innerHTML = Math.round(response.data.wind.speed) + " m/s";
   currentDates.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let newCity = document.querySelector("#city-form");

@@ -38,14 +38,17 @@
       </form>
 
       <div class="row">
-        <div class="col-4">
-          <div class="card h-100">
-            <img src="images/sunny.png" class="card-img-top" alt="Weather" />
+        <div class="col-6">
+          <div class="card-body-days">
+            <img
+              src="images/sunny.png"
+              class="card-img-top"
+              alt="Weather"
+              id="icon"
+            />
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-4">
+        <div class="col-6">
           <div class="float-left">
             <div class="card-body-days" id="allDays">
               <ul>
@@ -59,53 +62,52 @@
             </div>
           </div>
         </div>
-        <div class="row"></div>
-        <div class="col-3">
-          <div class="card h-100">
-            <img src="images/sunny.png" class="card-img-top" alt="Weather" />
-            <div class="card-body-days">
-              <ul>
-                <li class="card-text" id="tomorrow">Tomorrow</li>
-                <strong>
-                  <li class="card-title" id="apiPlace"></li>
-                </strong>
-                <li id="description_tomorrow"></li>
-                <li id="wind_tomorrow"></li>
-              </ul>
-            </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <img src="images/sunny.png" class="card-img-top" alt="Weather" />
+          <div class="card-body-days">
+            <ul>
+              <li class="card-text" id="tomorrow">Tomorrow</li>
+              <strong>
+                <li class="card-title" id="apiPlace"></li>
+              </strong>
+              <li id="description_tomorrow"></li>
+              <li id="wind_tomorrow"></li>
+            </ul>
           </div>
         </div>
-        <div class="col-3">
-          <div class="card h-100">
-            <img src="images/windy.png" class="card-img-top" alt="Weather" />
-            <div class="card-body-days">
-              <ul>
-                <li class="card-text" id="tomorrow2">Date</li>
-                <li class="card-title" id="apiPlace">
-                  <strong>Temperature</strong>
-                </li>
-                <li id="description_tomorrow2"></li>
-                <li id="wind_tomorrow2"></li>
-              </ul>
-            </div>
+
+        <div class="col-4">
+          <img src="images/windy.png" class="card-img-top" alt="Weather" />
+          <div class="card-body-days">
+            <ul>
+              <li class="card-text" id="tomorrow2">Date</li>
+              <li class="card-title" id="apiPlace">
+                <strong>Temperature</strong>
+              </li>
+              <li id="description_tomorrow2"></li>
+              <li id="wind_tomorrow2"></li>
+            </ul>
           </div>
         </div>
-        <div class="col-3">
-          <div class="card h-100">
-            <img src="images/snow.png" class="card-img-top" alt="Weather" />
-            <div class="card-body-days">
-              <ul>
-                <li class="card-text" id="nextWeek">Date</li>
-                <li class="card-title" id="apiPlace">
-                  <strong>Temperature</strong>
-                </li>
-                <li id="description_nextWeek"></li>
-                <li id="wind_nextWeek"></li>
-              </ul>
-            </div>
+
+        <div class="col-4">
+          <img src="images/snow.png" class="card-img-top" alt="Weather" />
+          <div class="card-body-days">
+            <ul>
+              <li class="card-text" id="nextWeek">Date</li>
+              <li class="card-title" id="apiPlace">
+                <strong>Temperature</strong>
+              </li>
+              <li id="description_nextWeek"></li>
+              <li id="wind_nextWeek"></li>
+            </ul>
           </div>
         </div>
       </div>
+
       <h2>Pick your favorite place</h2>
       <h3>👇🏼</h3>
       <div class="d-grid gap-2 col-4 mx-auto" id="favoriteButtons">

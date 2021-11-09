@@ -69,9 +69,12 @@ h3 {
   background-color: #ca0a74;
   border-color: #ca0a74;
 }
-
+.allDays {
+  padding: 110px 50px;
+  margin: 0%;
+}
 ul {
-  padding: 0%;
+  margin: 0%;
   list-style: none;
 }
 
