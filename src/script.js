@@ -35,10 +35,54 @@ function showTempSearchCity(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  getForcast(response.data.coord);
+  console.log(response.data);
 }
 
 let newCity = document.querySelector("#city-form");
 newCity.addEventListener("submit", cityPosition);
+
+function displayForcast(response) {
+  let forecastElement = document.querySelector("#forecast-weather");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+          <div class="col-3">
+            <ul class="forcast">
+              <strong>
+                <li class="forcast-temperature" id="apiPlace">
+                  <span class="forcast-temperature-min">YOUR</span
+                  ><span class="forcast-temperature-max"> WEATHER</span>
+                </li>
+              </strong>
+              <li class="card-text" id="tomorrow">${day}</li>
+              <img
+                src="images/sunny.png"
+                class="card-img-top"
+                alt="Weather"
+                width="50"
+              />
+              <li id="description_tomorrow"></li>
+              <li id="wind_tomorrow"></li>
+            </ul>
+          </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForcast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "69181bdb9d5f82f38a07c3cf8a85b271";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exlude={part}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForcast);
+}
 
 // Gives the current date and time
 function formatDate(timestamp) {
