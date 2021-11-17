@@ -61,26 +61,24 @@ function displayForcast(response) {
         ` 
           <div class="col-3">
             <ul class="forcast">
-              <strong>
                 <li class="forcast-temperature" id="apiPlace">
+                 <li class="card-text" id="tomorrow">${formatDay(
+                   forecastDay.dt
+                 )}</li>
                   <span class="forcast-temperature-min">${Math.round(
                     forecastDay.temp.min
-                  )}°C</span
-                  ><span class="forcast-temperature-max"> ${Math.round(
+                  )}°C  -</span
+                  ><strong><span class="forcast-temperature-max"> ${Math.round(
                     forecastDay.temp.max
                   )}°C</span>
                 </li>
-              </strong>
-              <li class="card-text" id="tomorrow">${formatDay(
-                forecastDay.dt
-              )}</li>
+         </strong>
               <img
                 src="http://openweathermap.org/img/wn/${
                   forecastDay.weather[0].icon
                 }@2x.png"
                 class="card-img-top"
                 alt="Weather"
-                width="50"
               />
               <li id="description_tomorrow"></li>
               <li id="wind_tomorrow"></li>
@@ -181,7 +179,7 @@ function CreateBookmark() {
   var text = browser.toUpperCase();
   if (text === "CHROME") {
     alert(`Three easy steps to get this page to appear when you click HOME:
-    
+
     1. At the top right, click Update and then Settings 
     2. Under Appearance, turn on Show Home button.
     3. Choose to use New Tab page 💚
