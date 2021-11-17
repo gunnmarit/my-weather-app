@@ -173,3 +173,24 @@ function favorite2(event) {
 
 let formFavorite2 = document.querySelector("#favorite2Buttons");
 formFavorite2.addEventListener("click", favorite2);
+
+/// create bookmark
+
+function CreateBookmark() {
+  let browser = prompt("What browser du you have?");
+  var text = browser.toUpperCase();
+  if (text === "CHROME") {
+    alert(`Three easy steps to get this page to appear when you click HOME:
+    
+    1. At the top right, click Update and then Settings 
+    2. Under Appearance, turn on Show Home button.
+    3. Choose to use New Tab page 💚
+    
+    Then you have YOUR WEATHER as your new home page!`);
+  } else {
+    alert("Sorry we don`t support that browser..");
+  }
+}
+
+let bookmark = document.querySelector("#bookmark");
+bookmark.addEventListener("click", CreateBookmark);
