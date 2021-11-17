@@ -55,7 +55,7 @@ function displayForcast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index > 0 && index < 5) {
       forecastHTML =
         forecastHTML +
         ` 
@@ -173,25 +173,3 @@ function favorite2(event) {
 
 let formFavorite2 = document.querySelector("#favorite2Buttons");
 formFavorite2.addEventListener("click", favorite2);
-
-//Converting Fahrenheit and Celsius
-function displayFahreinheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let currentPlace = document.querySelector("#apiPlace");
-  currentPlace.innerHTML =
-    "Temperature is: " + Math.round(fahrenheitTemperature) + "°F";
-}
-let celsiusTemperature = null;
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahreinheit);
-
-function displayCelsius(event) {
-  event.preventDefault();
-  let celsiusTemperatureConvert = document.querySelector("#apiPlace");
-  celsiusTemperatureConvert.innerHTML =
-    "Temperature is: " + Math.round(celsiusTemperature) + "°C";
-}
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsius);
