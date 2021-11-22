@@ -2,10 +2,11 @@
   max-width: 1000px;
   font-family: "Exo", sans-serif;
   margin: 30px auto;
-  background-image: url("/gitHubGM/my-weather-app/images/skies.jpg");
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  color: #ffffff;
+  background: linear-gradient(
+    rgb(215, 172, 240),
+    rgb(140, 206, 236),
+    rgb(252, 226, 178)
+  );
 }
 
 h1,
@@ -89,8 +90,8 @@ ul {
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #ca0a74;
-  border-color: #ca0a74;
+  background-color: #c5438b;
+  border-color: #be518d;
 }
 .allDays {
   padding: 10px;
@@ -110,17 +111,11 @@ li::first-letter {
 }
 .btn-primary {
   color: rgb(54, 54, 54);
-  background-color: #ec8fff;
-  border-color: #b461d4fc;
+  background-color: #eeacfb;
+  border-color: #eeacfb;
   display: block;
   margin-bottom: 10px;
   font-size: 20px;
-}
-
-.tempButton {
-  color: #ca0a74;
-  background-color: #fff;
-  border: 0ch;
 }
 
 small {
