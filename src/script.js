@@ -24,6 +24,7 @@ function showTempSearchCity(response) {
   let windElement = document.querySelector("#wind_today");
   let currentDates = document.querySelector("#today");
   let iconElement = document.querySelector("#icon");
+  document.body.container = "#f00";
   celsiusTemperature = response.data.main.temp;
 
   place.innerHTML = `Temperature is ${roundTem}°C`;
@@ -62,9 +63,11 @@ function displayForcast(response) {
           <div class="col-3">
             <ul class="forcast">
                 <li class="forcast-temperature" id="apiPlace">
+                <strong>
                  <li class="card-text" id="tomorrow">${formatDay(
                    forecastDay.dt
                  )}</li>
+                 </strong>
                   <span class="forcast-temperature-min">${Math.round(
                     forecastDay.temp.min
                   )}°C  -</span

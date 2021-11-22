@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="back">
       <h1>Your Weather</h1>
 
       <form class="d-flex" id="city-form">
@@ -42,8 +42,8 @@
         <div class="col-sm-4">
           <div class="justify-content-center">
             <img
-              src="images/weather.jpg"
-              class="card-img-top"
+              src=""
+              onerror="this.style.display='none'"
               alt="Weather"
               id="icon"
             />

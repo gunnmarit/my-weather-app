@@ -1,8 +1,13 @@
 .container {
-  max-width: 800px;
+  max-width: 900px;
   font-family: "Exo", sans-serif;
   margin: 80px auto 30px;
+  background-image: url("/gitHubGM/my-weather-app/images/skies.jpg");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: #ffffff;
 }
+
 h1,
 h2,
 h3 {
@@ -21,6 +26,7 @@ h2 {
   font-size: 50px;
 }
 
+/*Search place*/
 .d-flex {
   margin: 50px 50px 0px 50px;
 }
@@ -31,10 +37,18 @@ h2 {
   margin: 5px;
 }
 
+ul {
+  font-size: 20px;
+}
+/*Icons for the forecast*/
 .justify-content-center {
-  color: #ca0a74;
+  color: black;
   text-align: center;
-  padding-top: 35px;
+  width: 100;
+}
+
+.justify-content-center.icon {
+  width: 100px;
 }
 
 .col-sm-4 {
@@ -49,31 +63,31 @@ h2 {
   height: 50%;
   padding: 0px;
   margin: auto;
-  border: 1px dotted #ca0a74;
   border-radius: 40px;
 }
 
 .weather-forcast {
-  color: #ca0a74;
+  color: black;
   text-align: center;
 }
-
-/*kfdkgdgfdgf*/
 
 .forcast-temperature-min {
   opacity: 0, 4;
 }
 
 .card-body {
-  color: rgb(2, 143, 124);
+  color: black;
   padding: 0%;
 }
 .card-title {
   margin: 0%;
 }
+
+/*Icons to the forecast*/
 .card-img-top {
-  width: 50px;
+  width: 100px;
 }
+
 .btn-primary:hover {
   color: #fff;
   background-color: #ca0a74;
