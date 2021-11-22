@@ -1,7 +1,7 @@
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   font-family: "Exo", sans-serif;
-  margin: 80px auto 30px;
+  margin: 30px auto;
   background-image: url("/gitHubGM/my-weather-app/images/skies.jpg");
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -15,15 +15,9 @@ h3 {
 }
 
 h1 {
-  color: rgb(2, 143, 124);
+  color: rgb(111, 61, 116);
   font-size: 80px;
-  margin-bottom: 30px;
-}
-
-h2 {
-  color: #ffcf34fc;
-  margin: 40px auto 10px;
-  font-size: 50px;
+  margin: 50px auto;
 }
 
 /*Search place*/
@@ -34,7 +28,8 @@ h2 {
 .btn-outline-success {
   color: rgb(2, 143, 124);
   border-color: rgb(2, 143, 124);
-  margin: 5px;
+  font-size: 20px;
+  margin: 10px;
 }
 
 ul {
@@ -42,7 +37,7 @@ ul {
 }
 /*Icons for the forecast*/
 .justify-content-center {
-  color: black;
+  color: rgb(54, 54, 54);
   text-align: center;
   width: 100;
 }
@@ -67,7 +62,7 @@ ul {
 }
 
 .weather-forcast {
-  color: black;
+  color: rgb(54, 54, 54);
   text-align: center;
 }
 
@@ -76,7 +71,7 @@ ul {
 }
 
 .card-body {
-  color: black;
+  color: rgb(54, 54, 54);
   padding: 0%;
 }
 .card-title {
@@ -86,6 +81,10 @@ ul {
 /*Icons to the forecast*/
 .card-img-top {
   width: 100px;
+}
+
+.imgg {
+  background-color: rgba(255, 255, 255, 0.164);
 }
 
 .btn-primary:hover {
@@ -99,7 +98,7 @@ ul {
 ul {
   margin: 10px;
   list-style: none;
-  padding: 80px 0px;
+  padding: 40px 0px;
 }
 
 li::first-letter {
@@ -110,15 +109,21 @@ li::first-letter {
   margin-top: 50px;
 }
 .btn-primary {
-  color: #000;
-  background-color: #fad765fc;
-  border-color: #ffcf34fc;
+  color: rgb(54, 54, 54);
+  background-color: #ec8fff;
+  border-color: #b461d4fc;
   display: block;
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .tempButton {
   color: #ca0a74;
   background-color: #fff;
   border: 0ch;
+}
+
+small {
+  color: rgb(54, 54, 54);
+  padding-top: 20px;
 }

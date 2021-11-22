@@ -38,44 +38,28 @@
       </form>
 
       <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-4">
-          <div class="justify-content-center">
-            <img
-              src=""
-              onerror="this.style.display='none'"
-              alt="Weather"
-              id="icon"
-            />
-          </div>
-        </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
           <div class="justify-content-center" id="allDays">
             <ul>
-              <li class="card-text" id="today"></li>
+              <img src="" class="imgg" id="icon" />
               <strong>
                 <li class="card-title" id="apiPlace"></li>
               </strong>
               <li id="description_today"></li>
               <li id="wind_today"></li>
+              <li class="card-text" id="today"></li>
             </ul>
           </div>
         </div>
-        <div class="col-sm-2"></div>
+        <div class="col-sm-3"></div>
       </div>
 
       <div class="weather-forcast" id="forecast-weather"></div>
-      <h2>Pick your favorite place</h2>
       <h3>👇🏼</h3>
       <div class="d-grid gap-2 col-4 mx-auto" id="favoriteButtons">
         <button class="btn btn-primary" type="button" id="currentLocation">
           My current location
-        </button>
-        <button class="btn btn-primary" type="button" id="favorite1Buttons">
-          Hemsedal
-        </button>
-        <button class="btn btn-primary" type="button" id="favorite2Buttons">
-          Bergen
         </button>
       </div>
       <div class="card text-center">

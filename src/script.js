@@ -1,4 +1,4 @@
-//Get the city value that is scearch for at make a new headline
+//Get the city value that is scearch for and make a new headline
 function citySearch(event) {
   event.preventDefault();
   let searchPlaces = document.querySelector("#city-input");
@@ -24,7 +24,6 @@ function showTempSearchCity(response) {
   let windElement = document.querySelector("#wind_today");
   let currentDates = document.querySelector("#today");
   let iconElement = document.querySelector("#icon");
-  document.body.container = "#f00";
   celsiusTemperature = response.data.main.temp;
 
   place.innerHTML = `Temperature is ${roundTem}°C`;
@@ -50,6 +49,7 @@ function getForcast(coordinates) {
   axios.get(apiUrl).then(displayForcast);
 }
 
+//The weather forecast for the next days
 function displayForcast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast-weather");
@@ -137,8 +137,22 @@ function showTemperatureHere1(event) {
   function showTemperatureHere(response) {
     let currentPlace = document.querySelector("#apiPlace");
     currentPlace.innerHTML =
-      "Temperature is: " + Math.round(response.data.main.temp) + "°C";
+      "Temperature is " + Math.round(response.data.main.temp) + "°C";
+    let descriptionElemet = document.querySelector("#description_today");
+    let windElement = document.querySelector("#wind_today");
+    let currentDates = document.querySelector("#today");
+    let iconElement = document.querySelector("#icon");
     let yourPlace = document.querySelector("h1");
+
+    descriptionElemet.innerHTML = response.data.weather[0].description;
+    windElement.innerHTML =
+      "Wind: " + Math.round(response.data.wind.speed) + " m/s";
+    currentDates.innerHTML = formatDate(response.data.dt * 1000);
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    getForcast(response.data.coord);
     yourPlace.innerHTML = `The weather at your location!`;
   }
 
@@ -154,26 +168,6 @@ function showTemperatureHere1(event) {
 
 let mineLocation = document.querySelector("#currentLocation");
 mineLocation.addEventListener("click", showTemperatureHere1);
-
-function favorite1(event) {
-  event.preventDefault();
-  let searchFavorite1 = document.querySelector("#favorite1Buttons");
-  let favoriteSearch1 = document.querySelector("h1");
-  favoriteSearch1.innerHTML = `Your Weather in ${searchFavorite1.value} Hemsedal!`;
-}
-
-let formFavorite = document.querySelector("#favorite1Buttons");
-formFavorite.addEventListener("click", favorite1);
-
-function favorite2(event) {
-  event.preventDefault();
-  let searchFavorite2 = document.querySelector("#favorite2Buttons");
-  let favoriteSearch2 = document.querySelector("h1");
-  favoriteSearch2.innerHTML = `Your Weather in ${searchFavorite2.value} Bergen!`;
-}
-
-let formFavorite2 = document.querySelector("#favorite2Buttons");
-formFavorite2.addEventListener("click", favorite2);
 
 /// create bookmark
 
